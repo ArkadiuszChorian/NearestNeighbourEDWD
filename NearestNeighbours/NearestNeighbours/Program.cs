@@ -130,7 +130,7 @@ namespace NearestNeighbours
             var usersAndTheirSongs = numberOfUsers == UsersAndTheirSongs.Count ? UsersAndTheirSongs : FirstUsersAndTheirSongs;
 
             foreach (var userAndHisSongs in usersAndTheirSongs)
-            {                                      
+            {
                 stringBuilder.AppendLine("User = " + userAndHisSongs.Key);
 
                 var similarityDictionary = GetSimilarityWithAllUsers(userAndHisSongs.Key);
@@ -143,12 +143,12 @@ namespace NearestNeighbours
 
                 stringBuilder.AppendLine();
                 statusCounter++;
-                
+
                 Console.Clear();
                 Console.WriteLine("Number of users with calculated nearest neighbours: " + statusCounter);
-            }
-
+            }   
+            
             return stringBuilder.ToString();
-        }         
+        }      
     }
 }
